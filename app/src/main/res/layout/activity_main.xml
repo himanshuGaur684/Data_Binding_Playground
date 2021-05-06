@@ -5,7 +5,10 @@
 
     <data>
 
+
         <import type="gaur.himanshu.august.databindingplayground.model.Car" />
+
+        <import type="gaur.himanshu.august.databindingplayground.model.EngineType" />
 
         <variable
             name="tv1Text"
@@ -28,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
-            android:text="@{String.valueOf(car.number)}"
+            android:text="@{car.engineType==EngineType.DIESEL?EngineType.DIESEL.name():EngineType.PETROL.name()}"
             android:textSize="30sp" />
 
 
