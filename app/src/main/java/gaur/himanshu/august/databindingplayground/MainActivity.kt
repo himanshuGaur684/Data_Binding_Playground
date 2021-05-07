@@ -4,8 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import gaur.himanshu.august.databindingplayground.databinding.ActivityMainBinding
-import gaur.himanshu.august.databindingplayground.model.Car
-import gaur.himanshu.august.databindingplayground.model.EngineType
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,9 +15,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.tv1Text = "Data Binding Play"
-        val car = Car("Ford", 123, EngineType.PETROL)
-        binding.car = car
+
+
+        binding.url =
+            "http://3.bp.blogspot.com/-7-KmADvPxkY/UgitVrQvgiI/AAAAAAAAASo/lgZiaL6RfnY/s1600/Android+OS+for+Smartphone+Download+Free.jpg"
 
     }
 }

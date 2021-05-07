@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
 
-        <import type="gaur.himanshu.august.databindingplayground.model.Car" />
-
-        <import type="gaur.himanshu.august.databindingplayground.model.EngineType" />
-
         <variable
-            name="tv1Text"
+            name="url"
             type="String" />
-
-        <variable
-            name="car"
-            type="Car" />
 
     </data>
 
@@ -25,14 +18,12 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/tv_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
             android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:text="@{car.engineType==EngineType.DIESEL?EngineType.DIESEL.name():EngineType.PETROL.name()}"
-            android:textSize="30sp" />
+            app:urlImage="@{url}" />
 
 
     </RelativeLayout>
