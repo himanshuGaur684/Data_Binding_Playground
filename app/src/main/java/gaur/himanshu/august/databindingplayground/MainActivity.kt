@@ -17,8 +17,11 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
 
+        binding.placeholder = R.drawable.ic_placeholder
+        binding.error = R.drawable.ic_error
+
         binding.url =
-            "http://3.bp.blogspot.com/-7-KmADvPxkY/UgitVrQvgiI/AAAAAAAAASo/lgZiaL6RfnY/s1600/Android+OS+for+Smartphone+Download+Free.jpg"
+            "http://1.bp.blogspot.com/-B0WT_f1kqL8/Ub0pQUt9h7I/AAAAAAAAAn8/byzZbyzOyQ8/s1600/nexussamsungkindlefire.jpg"
 
     }
 }

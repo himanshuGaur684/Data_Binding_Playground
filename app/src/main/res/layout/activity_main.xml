@@ -11,6 +11,14 @@
             name="url"
             type="String" />
 
+        <variable
+            name="placeholder"
+            type="Integer" />
+
+        <variable
+            name="error"
+            type="Integer" />
+
     </data>
 
     <RelativeLayout
@@ -21,6 +29,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
+            app:error="@{error}"
+            app:placeHolder="@{placeholder}"
             android:scaleType="centerCrop"
             android:layout_centerInParent="true"
             app:urlImage="@{url}" />
