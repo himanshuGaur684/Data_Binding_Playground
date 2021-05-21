@@ -5,19 +5,79 @@
 
     <data>
 
+        <import type="gaur.himanshu.august.databindingplayground.viewmodel.CarViewModel" />
+
+        <variable
+            name="viewModel"
+            type="CarViewModel" />
     </data>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
         tools:context=".MainActivity">
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
+        <EditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Car Name"
+            android:text="@={viewModel.car.name}" />
+
+        <EditText
+            android:id="@+id/car_company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Car company name"
+            android:text="@={viewModel.car.companyName}" />
 
 
-    </RelativeLayout>
+        <RadioGroup
+            android:id="@+id/car_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Petrol" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Diesel" />
+
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/run_the_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Run the code"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+
+            android:text="@{viewModel.car.toString()}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
 </layout>

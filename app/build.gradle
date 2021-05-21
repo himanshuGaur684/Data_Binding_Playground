@@ -56,5 +56,9 @@ dependencies {
     // rounded image view
     implementation 'com.makeramen:roundedimageview:2.3.0'
 
+    // Coroutine Lifecycle Scopes
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
+
 
 }
