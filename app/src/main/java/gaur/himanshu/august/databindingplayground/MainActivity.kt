@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import gaur.himanshu.august.databindingplayground.databinding.ActivityMainBinding
-import gaur.himanshu.august.databindingplayground.recycler.DataBindingRecyclerAdapter
+import gaur.himanshu.august.databindingplayground.dynamicbinding.adapter.DynamicAdapter
+import gaur.himanshu.august.databindingplayground.dynamicbinding.model.PatchEnum
+import gaur.himanshu.august.databindingplayground.dynamicbinding.model.PatchModel
 
 
 class MainActivity : AppCompatActivity() {
@@ -13,16 +15,16 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
 
-    private val recyclerAdapter = DataBindingRecyclerAdapter()
+    private val recyclerAdapter = DynamicAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
 
-        val list = mutableListOf<String>()
+        val list = mutableListOf<PatchModel>()
 
-        init(list)
+        initPatchModel(list)
 
         recyclerAdapter.setContentList(list)
 
@@ -33,6 +35,29 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    fun initPatchModel(list: MutableList<PatchModel>) {
+        list.add(PatchModel(PatchEnum.BLUE.name, PatchEnum.BLUE))
+        list.add(PatchModel(PatchEnum.ORANGE.name, PatchEnum.ORANGE))
+        list.add(PatchModel(PatchEnum.GREEN.name, PatchEnum.GREEN))
+        list.add(PatchModel(PatchEnum.BLUE.name, PatchEnum.BLUE))
+        list.add(PatchModel(PatchEnum.ORANGE.name, PatchEnum.ORANGE))
+        list.add(PatchModel(PatchEnum.BLUE.name, PatchEnum.BLUE))
+        list.add(PatchModel(PatchEnum.GREEN.name, PatchEnum.GREEN))
+        list.add(PatchModel(PatchEnum.BLUE.name, PatchEnum.BLUE))
+
+        list.add(PatchModel(PatchEnum.BLUE.name, PatchEnum.BLUE))
+        list.add(PatchModel(PatchEnum.ORANGE.name, PatchEnum.ORANGE))
+        list.add(PatchModel(PatchEnum.GREEN.name, PatchEnum.GREEN))
+        list.add(PatchModel(PatchEnum.BLUE.name, PatchEnum.BLUE))
+        list.add(PatchModel(PatchEnum.ORANGE.name, PatchEnum.ORANGE))
+        list.add(PatchModel(PatchEnum.BLUE.name, PatchEnum.BLUE))
+        list.add(PatchModel(PatchEnum.GREEN.name, PatchEnum.GREEN))
+        list.add(PatchModel(PatchEnum.BLUE.name, PatchEnum.BLUE))
+
+
+    }
+
 
     fun init(list: MutableList<String>) {
         list.add("First")

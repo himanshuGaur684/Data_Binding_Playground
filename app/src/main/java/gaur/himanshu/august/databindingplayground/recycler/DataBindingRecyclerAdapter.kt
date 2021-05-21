@@ -10,6 +10,7 @@ class DataBindingRecyclerAdapter : RecyclerView.Adapter<DataBindingRecyclerAdapt
 
     var list = mutableListOf<String>()
 
+
     fun setContentList(list: MutableList<String>) {
         this.list = list
         notifyDataSetChanged()
@@ -37,4 +38,5 @@ class DataBindingRecyclerAdapter : RecyclerView.Adapter<DataBindingRecyclerAdapt
         holder.viewDataBinding.text = this.list[position]
 
     }
+
 }
